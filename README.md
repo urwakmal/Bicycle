@@ -1,3 +1,3 @@
 # README #
 
-https://talhaahbinabbasali123456.github.io/bicycle/
+https://urwakmal.github.io/bicycle/
