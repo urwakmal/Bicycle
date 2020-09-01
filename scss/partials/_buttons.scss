@@ -1,0 +1,16 @@
+//===========================================
+    // -Buttons start
+//===========================================
+
+.btn {
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 5px;
+  &[disabled], &.disabled{
+    cursor: not-allowed;
+  }
+}
+//===========================================
+    // -Buttons end
+//===========================================

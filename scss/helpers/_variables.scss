@@ -1,0 +1,30 @@
+//===========================================
+// -Variables start
+//===========================================
+
+// Colors start
+$white:			#fff; //white
+$black:			#000; //black
+$mine-shaft:	#3a3a3a; // dark gray
+$maroon-flush:	#d3205a; // Default Brand Color
+$smooth-red: #f34334;
+$theme-t-c: #5b5b5b;
+$theme-h-c: #222222;
+$bg-btn: #f34334;
+
+// Typography	
+$font-default:	'Lato', sans-serif;
+$font-primery:	'ostrichsansinlineregular', sans-serif;
+
+// Break Pointss
+$grid-breakpoints: (
+xs: 0,
+sm: 576px,
+md: 768px,
+lg: 992px,
+xl: 1200px
+) !default;
+
+//===========================================
+// -Variables end
+//===========================================

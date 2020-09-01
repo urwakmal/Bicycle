@@ -1,0 +1,48 @@
+//=======================================================
+// -Global style start
+//=======================================================
+
+
+// Default style start
+
+html, body {
+  font-family: $font-default;
+  font-size: 8px;
+  width: 100%;
+  scroll-behavior: smooth;
+  transition: 50ms;
+	
+	@include mq('sm', min) {
+    font-size: 10px;
+  }
+	@include mq('md', min) {
+    font-size: 12px;
+  }
+	@include mq('lg', min) {
+    font-size: 14px;
+  }
+  @include mq('xl', min) {
+    font-size: 16px;
+  }
+}
+.main-container {
+  max-width: 1169px;
+  margin: 0 auto;
+}
+.button {
+  margin-top: 80px;
+  padding: 18px 30px;
+  border: none;
+  transition: 400ms;
+  &:hover {
+    background-color: $theme-h-c;
+  }
+}
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+//=======================================================
+// -Global style  end
+//=======================================================

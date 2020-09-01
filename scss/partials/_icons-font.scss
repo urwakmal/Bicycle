@@ -1,0 +1,71 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?6mwfu5');
+  src:  url('../fonts/icomoon.eot?6mwfu5#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?6mwfu5') format('truetype'),
+    url('../fonts/icomoon.woff?6mwfu5') format('woff'),
+    url('../fonts/icomoon.svg?6mwfu5#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-bicycle-"], [class*=" icon-bicycle-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-bicycle-search:before {
+  content: "\e900";
+}
+.icon-bicycle-arrow-down:before {
+  content: "\e901";
+}
+.icon-bicycle-sort-down:before {
+  content: "\e902";
+}
+.icon-bicycle-heart:before {
+  content: "\e903";
+}
+.icon-bicycle-shopping-bag:before {
+  content: "\e904";
+}
+.icon-bicycle-left-arrow:before {
+  content: "\e905";
+}
+.icon-bicycle-right-arrow:before {
+  content: "\e906";
+}
+.icon-bicycle-star:before {
+  content: "\e907";
+}
+.icon-bicycle-star-half:before {
+  content: "\e908";
+}
+.icon-bicycle-fb-logo:before {
+  content: "\e909";
+}
+.icon-bicycle-twitter-logo:before {
+  content: "\e90a";
+}
+.icon-bicycle-google:before {
+  content: "\e90b";
+}
+.icon-bicycle-tumblr-logo:before {
+  content: "\e90c";
+}
+.icon-bicycle-pinterest-logo:before {
+  content: "\e90d";
+}
+.icon-bicycle-flickr-square:before {
+  content: "\e90e";
+}

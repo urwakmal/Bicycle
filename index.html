@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <!-- jquery auto compelete link -->
+    <link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
+    rel = "stylesheet">
+    <script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    
+    <!-- animate css library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <!--  -->
+    
+    <!-- fonts cdn -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+    <!--  -->
+    
+    <!-- Our link -->
+    <link rel="stylesheet" href="./css/style.css">
+    <!--  -->
+    <title>Document</title>
+</head>
+
+<body onload="init()">
+    <!-- side nav -->
+    <div class="side-navbar animated fast fadeOutRight hidden">
+        <div class="side-nav-layout">
+            <img onclick="sideNavClose()" src="images/cross.png" alt="">
+            <ul>
+                <li><a href="#">USD</a></li>
+                <li><a href="#">English</a></li>
+                <li><a href="#">Call Us: 03242341018</a></li>
+            </ul>
+            <ul>
+                <li><a href="#">My Account</a></li>
+                <li><a href="#">Wishlist</a></li>
+                <li><a href="#">My Cart</a></li>
+                <li><a href="#">Check Out</a></li>
+                <li><a href="#">Login</a></li>
+            </ul>
+            
+            <hr>
+            <hr>
+            
+            <ul>
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">CATAGORY</a></li>
+                <li><a href="#">BIKES</a></li>
+                <li><a href="#">GEAR</a></li>
+                <li><a href="#">BLOG</a></li>
+                <li><a href="#">ABOUT</a></li>
+                <li><a href="#">CONTACT</a></li>
+            </ul>
+            <ul>
+                <li>
+                    <i class="icon-bicycle-heart"></i> 
+                    <a href="#">Cart : $199.00</a> 
+                    <i class="icon-bicycle-shopping-bag"></i>
+                </li>
+            </ul>
+            
+            <hr>
+            <hr>
+            
+        </div>
+    </div>
+    <!--  -->
+    <!-- header start -->
+    
+    <header>
+        <div class="main-container">
+            <div class="nav-top clearfix">
+                <ul class="nt-left">
+                    <li><a href="#">USD <i class="icon-bicycle-arrow-down"></i></a></li>
+                    <li><a href="#">English <i class="icon-bicycle-arrow-down"></i></a></li>
+                    <li><a href="#">Call Us: 03242341018</a></li>
+                </ul>
+                <ul class="nt-right">
+                    <li><a href="#">My Account</a></li>
+                    <li><a href="#">Wishlist</a></li>
+                    <li><a href="#">My Cart</a></li>
+                    <li><a href="#">Check Out</a></li>
+                    <li><a href="#">Login</a></li>
+                </ul>
+            </div>
+            <div class="nav-mid clearfix">
+                <h1>BIKE SPORTS</h1>
+                <div class="nm-right">
+                    <div>
+                        <div>All Catagory
+                            <div class="dropdown hidden animated fadeInDown">
+                                <div class="drop-layout">
+                                    <p>bicyle</p> 
+                                    <p>jumper</p>  
+                                    <p>gear</p> 
+                                    <p>sport</p> 
+                                    <p>simple</p> 
+                                    <p>fast</p> 
+                                    <p>plane</p> 
+                                    <p>rider</p>
+                                </div>
+                            </div>
+                        </div>
+                        <i class="icon-bicycle-sort-down drop-open" onclick="dropdownOpen()"></i>
+                        <i class="icon-bicycle-cancel-circle drop-close" onclick="dropdownClose()"></i>
+                    </div>
+                    <div class="input-div">
+                        <input type="text" placeholder="Search for product" id = "autocomplete-4"  class="min-bar-inp">
+                        <i class="icon-bicycle-search search-icon"></i>
+                        <i class="icon-bicycle-cancel-circle cross hidden" onclick="cross()"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="black-nav bg-black animated faster">
+            <div class="main-container">
+                <div class="bn-cont clearfix">
+                    <ul class="bn-left">
+                        <li><a href="#">HOME</a></li>
+                        <li class="tooltip"> <span class="tooltip-popup orange animated pulse infinite">ON SALE!</span>
+                            <a href="#">CATAGORY</a></li>
+                            <li><a href="#">BIKES</a></li>
+                            <li><a href="#">GEAR</a></li>
+                            <li class="tooltip"> <span class="tooltip-popup blue animated pulse infinite">BEST OFF</span>
+                                <a href="#">BLOG</a></li>
+                                <li><a href="#">ABOUT</a></li>
+                                <li><a href="#">CONTACT</a></li>
+                            </ul>
+                            <ul class="bn-right">
+                                <li>
+                                    <a href="#">
+                                        <i class="icon-bicycle-heart"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="icon-bicycle-shopping-bag"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">Cart : $199.00</a>
+                                </li>
+                            </ul>
+                            
+                            <!-- humberger -->
+                            <div class="humburger clearfix">
+                                <img onclick="sideNavOpen()" src="images/humbuger.png" alt="">
+                                <div>
+                                    <input type="text" placeholder="Search for product" class="small_screen-inp" id="autocomplete-2">
+                                    <i class="icon-bicycle-search search-icon2"></i>
+                                    <i class="icon-bicycle-cancel-circle cross2 hidden" onclick="crossSmallScreen()"></i>
+                                </div>
+                            </div>
+                            <!--  -->
+                        </div>
+                    </div>
+                </div>
+            </header>
+            
+            <!--  -->
+            
+            
+            
+            <!--  -->
+            
+            <div class="slider animated fast">
+                
+                <div class="swiper-container">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide slide-1">
+                            <div class="slidelayout">
+                                <div class="main-container">
+                                    <div class="main-heading">
+                                        <img src="images/the-bicycle.png" alt="">
+                                        <p><em>Lorem Ipsum is simply dummy text of the printing</em></p>
+                                        <button class="button bg-btn bold">
+                                            SHOP NOW
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide slide-2">
+                            <div class="slidelayout">
+                                <div class="main-container">
+                                    <div class="main-heading">
+                                        <img src="images/the-bicycle.png" alt="">
+                                        <p><em>Lorem Ipsum is simply dummy text of the printing</em></p>
+                                        <button class="button bg-btn bold">
+                                            SHOP NOW
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide slide-3">
+                            <div class="slidelayout">
+                                <div class="main-container">
+                                    <div class="main-heading">
+                                        <img src="images/the-bicycle.png" alt="">
+                                        <p><em>Lorem Ipsum is simply dummy text of the printing</em></p>
+                                        <button class="button bg-btn bold">
+                                            SHOP NOW
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+                    
+                    <!-- navigation buttons -->
+                    <div class="swiper-button-prev arr-left">
+                        <i class="icon-bicycle-left-arrow"></i>
+                    </div>
+                    <div class="swiper-button-next arr-right">
+                        <i class="icon-bicycle-right-arrow"></i>
+                    </div>
+                    <!--  -->
+                    
+                </div>
+            </div>
+            
+            <!-- header end -->
+            
+            <!-- feature container -->
+            
+            <div class="feature-main-container">
+                <div class="main-container">
+                    <div class="feature-container clearfix">
+                        <div class="fc">
+                            <div class="fc-content">
+                                <h1 class="text-center">FREE UK DELIVERY</h1>
+                                <p class="text-center">International delivery available</p>
+                            </div>
+                        </div>
+                        <div class="fc">
+                            <div class="fc-content border">
+                                <h1 class="text-center">GIFT CARDS & WRAPPING</h1>
+                                <p class="text-center">The perfect way to bring a smile</p>
+                            </div>
+                        </div>
+                        <div class="fc">
+                            <div class="fc-content">
+                                <h1 class="text-center">QUALIFIED OPTICIANS</h1>
+                                <p class="text-center">prescription Experts</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="shadow-container">
+                        <div class="main-container">
+                            <div class="check">
+                                <img src="images/shadow.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!--  -->
+            
+            <div class="featured-product-div">
+                <div class="main-container">
+                    <div class="fpd-heading-cont clearfix">
+                        <h1>FEATURED PRODUCTS</h1>
+                        <div class="fpdh-right">
+                            <ul class="clearfix">
+                                <li><a href="">On-Road</a></li>
+                                <li><a href="">X-Road</a></li>
+                                <li><a href="">Off-Road</a></li>
+                                <li><a href="">BMX</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="fp-box-container clearfix">
+                        <div class="box">
+                            <div class="b-img bg-img1">
+                                <button class="button bt animated fadeInLeft faster">Add to cart</button>
+                                <button class="button bt animated fadeInRight  faster">Quick view</button>
+                            </div>
+                            <p class="text-center a">Propel Advanced SL 0</p>
+                            <p class="text-center b">$900.00</p>
+                            <p class="text-center last">
+                                <span class="bullets  blue"></span>
+                                <span class="bullets  yellow"></span>
+                                <span class="bullets  purple"></span>
+                                <span class="bullets  gray"></span>
+                                <span class="bullets  orange"></span>
+                            </p>
+                        </div>
+                        <div class="box">
+                            <div class="b-img bg-img2">
+                                <button class="button bt animated fadeInLeft faster">Add to cart</button>
+                                <button class="button bt animated fadeInRight  faster">Quick view</button>
+                            </div>
+                            <p class="text-center a">Defy Advanced SL</p>
+                            <p class="text-center b">$1,770.00</p>
+                            <p class="text-center last">
+                                <span class="bullets  blue"></span>
+                                <span class="bullets  yellow"></span>
+                                <span class="bullets  purple"></span>
+                                <span class="bullets  gray"></span>
+                                <span class="bullets  orange"></span>
+                            </p>
+                        </div>
+                        <div class="box">
+                            <div class="b-img bg-img3">
+                                <button class="button bt animated fadeInLeft faster">Add to cart</button>
+                                <button class="button bt animated fadeInRight  faster">Quick view</button>
+                            </div>
+                            <p class="text-center a">FastRoad CoMax</p>
+                            <p class="text-center b">$900.00</p>
+                            <p class="text-center last">
+                                <span class="bullets  blue"></span>
+                                <span class="bullets  yellow"></span>
+                                <span class="bullets purple"></span>
+                                <span class="bullets  gray"></span>
+                                <span class="bullets  orange"></span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!--  -->
+            
+            <div class="product-detail-container theme-bg-color">
+                <div class="main-container">
+                    <div class="pdc-cont">
+                        <div class="pd-img">
+                            <div class="pd-img-box">
+                            </div>
+                        </div>
+                        <div class="pd-detail-cont">
+                            
+                            <div class="time">
+                                <div class="t-box text-center"> <strong>120</strong> <span>days</span></div>
+                                <div class="t-box text-center"> <strong>09</strong> <span>hours</span></div>
+                                <div class="t-box text-center"> <strong>38</strong> <span>min</span></div>
+                                <div class="t-box text-center"> <strong>58</strong> <span>sec</span></div>
+                            </div>
+                            
+                            <div class="price">
+                                <p>Propal Advanced Pro Frameset</p>
+                                <p>
+                                    <i class="icon-bicycle-star"></i>
+                                    <i class="icon-bicycle-star"></i>
+                                    <i class="icon-bicycle-star"></i>
+                                    <i class="icon-bicycle-star"></i>
+                                    <i class="icon-bicycle-star-half"></i>
+                                </p>
+                                <h3 class="bold">$2,290.00</h3>
+                            </div>
+                            
+                            <div class="color clearfix">
+                                <p class="clearfix">
+                                    <span>color:</span>
+                                    <span class="cell  blue"></span>
+                                    <span class="cell  yellow"></span>
+                                    <span class="cell purple"></span>
+                                    <span class="cell  gray"></span>
+                                    <span class="cell  orange"></span>
+                                </p>
+                                <span class="stock">In stock: 10</span>
+                            </div>
+                            
+                            <div class="add-to-cart-cont">
+                                <button class="button bg-btn"> <i class="icon-bicycle-shopping-bag"></i> ADD TO CART</button>
+                                <button class="button theme-bg-color"> <i class="icon-bicycle-heart"></i> ADD TO WISHLIST</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            
+            <!--  -->
+            
+            
+            
+            <div class="widget-container">
+                <div class="main-container">
+                    <div class="widget-cont clearfix">
+                        <h1>WIDGET PRODUCTS</h1>
+                        <div class="widget-right">
+                            <ul class="clearfix">
+                                <li><a href="">Baby-seats</a></li>
+                                <li><a href="">Bells</a></li>
+                                <li><a href="">Bottle cages</a></li>
+                                <li><a href="">Fenders</a></li>
+                                <li><a href="">View-all</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!--  -->
+                    <div class="widget-product-box-container clearfix">
+                        
+                        <div class="product-box">
+                            <div class="box-image-div img1">
+                                
+                            </div>
+                            <p>Rack-It Disc Rack</p>
+                            <p>$1100.00</p>
+                        </div>
+                        <div class="product-box">
+                            <div class="box-image-div img2">
+                                
+                            </div>
+                            <p>Rack-It Disc Rack</p>
+                            <p>$1100.00</p>
+                        </div>
+                        <div class="product-box">
+                            <div class="box-image-div img3">
+                                
+                            </div>
+                            <p>Rack-It Disc Rack</p>
+                            <p>$1100.00</p>
+                        </div>
+                        <div class="product-box">
+                            <div class="box-image-div img4">
+                                
+                            </div>
+                            <p>Rack-It Disc Rack</p>
+                            <p>$1100.00</p>
+                        </div>
+                        <div class="product-box">
+                            <div class="box-image-div img5">
+                                
+                            </div>
+                            <p>Rack-It Disc Rack</p>
+                            <p>$1100.00</p>
+                        </div>
+                        <div class="product-box">
+                            <div class="box-image-div img6">
+                                
+                            </div>
+                            <p>Rack-It Disc Rack</p>
+                            <p>$1100.00</p>
+                        </div>
+                        <div class="product-box">
+                            <div class="box-image-div img7">
+                                
+                            </div>
+                            <p>Rack-It Disc Rack</p>
+                            <p>$1100.00</p>
+                        </div>
+                        <div class="product-box">
+                            <div class="box-image-div img8">
+                                
+                            </div>
+                            <p>Rack-It Disc Rack</p>
+                            <p>$1100.00</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!--  -->
+            
+            <div class="get-in-touch-container">
+                <div class="git-layout">
+                    <div class="main-container">
+                        <h1>GET IN TOUCH</h1>
+                        <p>Have an idea or a project, lets collaborate and build some awesoe stuff</p>
+                        <button class="button bg-btn bold">
+                            BUY NOW
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!--  -->
+            
+            <div class="from-our-blog-container">
+                <div class="main-container">
+                    <div class="heading-container">
+                        <h1>FROM OUR BLOG</h1>
+                        <p>Latest news & event of our bike</p>
+                    </div>
+                    <div class="blog-container clearfix">
+                        <div class="blog1">
+                            <div class="blog-image bg-img1"></div>
+                            <div class="blog-content">
+                                <h3>Gulf Today Report On KGS Carnival – 2015</h3>
+                                <p>Posted at March 19. 2015</p>
+                                <p>Excellence is never an accident. It is always the result of high intention and intelligent
+                                    execution; it represents the wise choice of many alternatives.</p>
+                                    <p>Continue Reading</p>
+                                </div>
+                            </div>
+                            <div class="blog2">
+                                <div class="blog-image bg-img2"></div>
+                                <div class="blog-content">
+                                    <h3>Excepteur sint ipsum dolor sit amet conse ctetur</h3>
+                                    <p>Posted at March 19. 2015</p>
+                                    <p>Excellence is never an accident. It is always the result of high intention and intelligent
+                                        execution; it represents the wise choice of many alternatives.</p>
+                                        <p>Continue Reading</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!--  -->
+                            
+                            <div class="shad">
+                                <img src="images/shadow.png" alt="">
+                            </div>
+                            
+                            <!--  -->
+                            
+                            <div class="sponsored-container">
+                                <img src="images/sherard.jpg" alt="">
+                                <img src="images/midnight.jpg" alt="">
+                                <img src="images/year.jpg" alt="">
+                                <img src="images/netsuite.jpg" alt="">
+                                <img src="images/target.jpg" alt="">
+                                <img src="images/audio-jungle.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <!--  -->
+                    
+                    <footer class="theme-bg-color">
+                        <div class="main-container">
+                            <div class="footer-content-container clearfix">
+                                <div class="f-container-left">
+                                    <h3>CONTACT INFO</h3>
+                                    <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium</p>
+                                    <div>
+                                        <div class="detail-cont clearfix">
+                                            <p class="red">Address :</p>
+                                            <p class="detail">123 Sky Tower address name, Los Algeles, USA, Country, 01234</p>
+                                        </div>
+                                        <div class="detail-cont clearfix">
+                                            <p class="red">Phone :</p>
+                                            <p class="detail">03242341018</p>
+                                        </div>
+                                        <div class="detail-cont clearfix">
+                                            <p class="red">Email :</p>
+                                            <p class="detail">talhaabbas69@gmail.com</p>
+                                        </div>
+                                    </div>
+                                    <div class="f-input-div">
+                                        <input type="text" placeholder="Enter Your Email..">
+                                        <button class="button">Subscribe</button>
+                                    </div>
+                                    <div class="f-icon-div">
+                                        <i class="icon-bicycle-fb-logo"></i>
+                                        <i class="icon-bicycle-twitter-logo"></i>
+                                        <i class="icon-bicycle-google"></i>
+                                        <i class="icon-bicycle-tumblr-logo"></i>
+                                        <i class="icon-bicycle-flickr-square"></i>
+                                        <i class="icon-bicycle-pinterest-logo"></i>
+                                    </div>
+                                </div>
+                                
+                                <!--  -->
+                                
+                                <div class="f-container-right">
+                                    <h3>WHAT CLIENT SAYS?</h3>
+                                    <div class="avatra-container">
+                                        <img src="images/avatra.png" alt="">
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                            ut labore et dolore magna aliqua.
+                                            <span>Kathy Young</span>
+                                        </p>
+                                    </div>
+                                    <div class="info-links clearfix">
+                                        <div class="buy-info">
+                                            <div class="info-title">
+                                                <h4>HOW TO BUY</h4>
+                                            </div>
+                                            <div class="info-links">
+                                                <a href="#">Contact Us</a>
+                                                <a href="#">Returns</a>
+                                                <a href="#">Site Map</a>
+                                                <a href="#">Brands</a>
+                                                <a href="#">Gift Vouchers</a>
+                                            </div>
+                                        </div>
+                                        <!-- <div> -->
+                                            <div class="buy-info">
+                                                <div class="info-title">
+                                                    <h4>MY ACCOUNT</h4>
+                                                </div>
+                                                <div class="info-links">
+                                                    <a href="#">My Account</a>
+                                                    <a href="#">Order History</a>
+                                                    <a href="#">Wish List</a>
+                                                    <a href="#">News Letters</a>
+                                                    <a href="#">Specials</a>
+                                                </div>
+                                            </div>
+                                            <!-- </div> -->
+                                            <!-- <div> -->
+                                                <div class="buy-info">
+                                                    <div class="info-title">
+                                                        <h4>INFORMATION</h4>
+                                                    </div>
+                                                    <div class="info-links">
+                                                        <a href="#">About Us</a>
+                                                        <a href="#">Contact Us</a>
+                                                        <a href="#">Terms and Conditions</a>
+                                                        <a href="#">Privacy Policy</a>
+                                                        <a href="#">Orders 7 Returns</a>
+                                                    </div>
+                                                </div>
+                                                <!-- </div> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </footer>
+                            <div class="last-div">
+                                <div class="main-container">
+                                    <div class="clearfix copyright-div">
+                                        <p>Copyright © 2015 <span>Magento Themes</span> by TemPlaza. All rights reserved.</p>
+                                        <div>
+                                            <img src="images/visa.jpg" alt="">
+                                            <img src="images/flickr.jpg" alt="">
+                                            <img src="images/ebay.jpg" alt="">
+                                            <img src="images/amazon.jpg" alt="">
+                                            <img src="images/discover.jpg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- swiper -->
+                            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.2/css/swiper.css">
+                            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.2/css/swiper.min.css">
+                            <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.2/js/swiper.js"></script>
+                            <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.2/js/swiper.min.js"></script>
+                        </body>
+                        <script src="js/script.js"></script>
+                        
+                        </html>

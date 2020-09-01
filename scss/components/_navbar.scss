@@ -1,0 +1,307 @@
+//===========================================
+// -Navbar start
+//===========================================
+.side-navbar {
+	position: fixed;
+	top: 0px;
+	right: 0px;
+	width: 100%;
+	background-image: url("../images/image2.jpg");
+	background-size: cover;
+	background-position: center;
+	color: $smooth-red;
+	z-index: 10;
+	transition: 500ms;
+	font-size: rem(28);
+	.side-nav-layout {
+		width: 100%;
+		background-color: #000000d6;
+		height: 100vh;
+		overflow: scroll;
+		padding: 20px;
+	}
+	ul 	{
+		padding-bottom: 30px;
+		li {
+			padding: 10px 20px;
+			
+		}
+	}
+	a {
+		color: #fff;
+		text-decoration: none;
+		&:hover {
+			color: $smooth-red;
+		}
+	}
+	img {
+		height: 20px;
+		border-radius: 10%;
+		width: 20px;
+		transition: 100ms;
+		padding: 10px;
+	}
+}
+.humburger {
+	padding: 0px;
+	display: none;
+	color: white;
+	div {
+		float: left;
+		padding: 0px;
+		margin: 0px 18px;
+		position: relative;
+		color: $white;
+		display: table;
+		font-size: rem(25);
+		border-bottom: 2px solid $smooth-red;
+		input {
+			display: table-cell;
+			background-color: $theme-h-c;
+			background: none;
+			outline: none;
+			border: none;
+			margin: 0px;
+			padding: 15px 20px 15px 15px;
+		}
+		i{
+			display: table-cell;
+			vertical-align: middle;
+			padding: 0px;
+			margin: 0px;
+		}
+	}
+	img {
+		float: right;
+		height: 25px;
+		margin:  0px 18px;
+		padding: 10px;
+		border-bottom: 2px solid $smooth-red;
+	}
+	@include mq('md', max) {
+		display: block;
+	}
+}
+
+.nav-top {
+	padding: 0px;
+	font-size: rem(14);
+	transition: 200ms;
+	
+	.nt-left {
+		padding: 0px;
+		margin: 0px;
+		float: left;
+		list-style-type: none;
+		:nth-child(1) {
+			padding-left: 2px;
+		}
+		:nth-child(2) {
+			border-right: 1px solid gray;
+			border-left: 1px solid gray;
+		}
+		li {
+			padding: 5px 20px;
+			display: inline-block;
+			margin: 8px 0px;
+			a {
+				color: $theme-t-c;
+				text-decoration: none;
+				i {
+					font-size: rem(10);
+					margin-left: 5px;
+				}
+			}
+			
+		}
+	}
+	.nt-right {
+		padding: 0px;
+		margin: 0px;
+		float: right;
+		list-style-type: none;
+		:nth-child(2) {
+			border-right: 1px solid gray;
+			border-left: 1px solid gray;
+		}
+		:nth-child(4) {
+			border-right: 1px solid gray;
+			border-left: 1px solid gray;
+		}
+		li {
+			padding: 5px 20px;
+			display: inline-block;
+			margin: 8px 0px;
+			a {
+				color: $theme-t-c;
+				text-decoration: none;
+			}
+			
+		}
+	}
+	@include mq('md', max) {
+		.nt-left, .nt-right {
+			display: none;
+		}
+	}
+}
+
+.nav-mid {
+	padding: 35px 0px; 
+	transition: 200ms;
+	
+	h1 {
+		float: left;
+		margin: 0px;
+		padding: 0px;
+		font-size: rem(40);
+		color: $theme-h-c;
+		font-weight: 900;
+	}
+	.nm-right {
+		float: right;
+		
+		div {
+			margin: 0px 5px;
+			display: inline-block;
+			border: 1px solid #5b5b5b66;
+			padding: 15px 25px;
+			div {
+				border: none;
+				position: relative;
+				padding: 0px 30px 0px 0px;
+				color: $theme-t-c;
+				.dropdown {
+					margin: 0px;
+					width: 145px;
+					z-index: 2;
+					background-color: $white;
+					position: absolute;
+					left: -30px;
+					top: 34px;
+					padding: 0px 25px;
+					border: 1px solid #5b5b5b66;
+					p {
+						color: $black;
+						font-weight: bolder;
+						cursor: pointer;
+						&:hover {
+							color: $smooth-red;
+						}
+					}
+				}
+			}
+			.drop-open {
+				cursor: pointer;
+				
+			}
+			.drop-close {
+				cursor: pointer;
+				display: none;
+			}
+			input {
+				width: 300px;
+				border: none;
+			}
+			i {
+				color: #000000c7;
+			}
+		}
+		.input-div {
+			padding: 0px;
+			margin: 0px;
+			position: relative;
+			input {
+				padding: 15px 40px 15px 20px;
+			}
+			i {
+				position: absolute;
+				top: 0;
+				right: 0;
+				margin: 16px
+			}
+		}
+	}
+	@include mq('md', max) {
+		.nm-right {
+			display: none;
+		}
+		h1 {
+			display: block;
+			float: none;
+			text-align: center;
+		}
+	}
+}
+.black-nav {
+	position: sticky;
+	bottom: 0px;
+}
+.bn-cont {
+	padding: 0px;
+	font-size: rem(16);	
+	.bn-left {
+		float: left;
+		padding: 0px;
+		list-style-type: none;
+		:nth-child(1) {
+			a {
+				padding-left: 0px;
+			}
+		}
+		li {
+			display: inline-block;
+			padding: 0px;
+			a {
+				
+				margin-top: 0px;
+				height: auto;
+				color: white;
+				text-decoration: none;
+				padding: 18px 10px 16px 10px;
+				font-size: rem(14);
+				transition: 500ms;
+				&:hover {
+					color: $smooth-red;
+				}
+				
+			}
+		}
+	}
+	.bn-right {
+		float: right;
+		padding: 0px;
+		list-style-type: none;
+		li {
+			display: inline-block;
+			padding: 0px;
+			a {
+				
+				margin-top: 0px;
+				height: auto;
+				color: white;
+				text-decoration: none;
+				padding: 18px 10px 13px 10px;
+				font-size: rem(14);
+				transition: 500ms;
+				border-bottom: 3px solid transparent;
+				&:hover {
+					color: $smooth-red;
+				}
+			}
+		}
+	}
+	@include mq('md', max) {
+		.bn-right {
+			display: none;
+		}
+		.bn-left {
+			display: none;
+		} 
+	}
+}
+
+
+//===========================================
+// -Navbar end
+//===========================================

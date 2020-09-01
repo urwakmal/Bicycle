@@ -1,2 +1,3 @@
-# Bicycle
-A demo flex based website for learning purposes
+# README #
+
+https://talhaahbinabbasali123456.github.io/bicycle/
